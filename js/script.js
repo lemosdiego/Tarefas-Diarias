@@ -26,8 +26,12 @@ function novasTarefas() {
                 <p>${tarefa.tarefa}</p>
             </div>
             <div class="itens  ${tarefa.concluida && "feito"}">
-                <button onclick="tarefaConcluida(${index})">feita</button>
-                <button  onclick="removerTarefa(${index})">remover</button">
+                <div class="icon">
+                    <img onclick="tarefaConcluida(${index})" class="concluída"  src="./img/check.svg" alt="imagem para concluir tarefa"/>
+                </div>
+                 <div class="icon">
+                  <img  onclick="removerTarefa(${index})" class="remover" src="./img/remove.svg" alt="icone para remover tarefa"/>
+                  </div>
             </div>
          </li>
         

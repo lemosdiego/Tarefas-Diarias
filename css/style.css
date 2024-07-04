@@ -2,59 +2,72 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+
 }
 
-@media(min-width: 1201px) {
+@media(min-width: 320px) and (max-width: 480px) {
   .container {
-    border: solid 10px #000;
     width: 100%;
     height: 100vh;
+    background-color: #5f7eef;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
   }
 
-  .container-tarefa {
-    width: 50%;
+  .container-lista {
+    width: 90%;
+    height: 90%;
+    background-color: #160063;
+    border-radius: 10px;
+  }
+
+  .title {
+    width: 100%;
     height: 15%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    border-radius: 10px;
-    background-color: #fafafa;
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    justify-content: center;
   }
 
-  .container-tarefa input {
+  .title h1 {
+    font-size: 2rem;
+    color: #fff;
+  }
+
+  .container-tarefa {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .input {
     width: 70%;
-    height: 50px;
-    border-radius: 10px;
-    padding-left: 20px;
+    height: 40px;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    border-radius: 4px;
+    padding-left: 10px;
     font-size: 1.1rem;
   }
 
-  .container-tarefa button {
+  .add {
     width: 20%;
-    height: 50px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 1rem;
+    height: 40px;
+    font-size: 1.5rem;
     border: none;
-
-  }
-
-  .container-tarefa button:hover {
-    opacity: 0.7;
+    border-radius: 4px;
+    background-color: #fea50d;
   }
 
   .lista {
-    width: 50%;
-    height: 50%;
-    border-radius: 10px;
-    background-color: #d1d1d1;
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    width: 100%;
+    height: 70%;
   }
 
   .lista ul {
@@ -69,20 +82,405 @@
   .lista ul li {
     margin-top: 10px;
     width: 90%;
-    height: 55px;
+    height: 50px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    border-bottom: solid 1px #000;
+  }
+
+  .tarefa {
+    width: 70%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  .tarefa p {
+    margin-left: 10px;
+    color: #fff;
+  }
+
+  .itens {
+    width: 30%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .icon img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .feito {
+    background-color: #00e429;
+    text-decoration: line-through;
+    border-radius: 4px;
+
+  }
+
+}
+
+@media(min-width: 481px) and (max-width: 768px) {
+  .container {
+    width: 100%;
+    height: 100vh;
+    background-color: #5f7eef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container-lista {
+    width: 90%;
+    height: 90%;
+    background-color: #160063;
+    border-radius: 10px;
+  }
+
+  .title {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title h1 {
+    font-size: 2rem;
+    color: #fff;
+  }
+
+  .container-tarefa {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .input {
+    width: 70%;
+    height: 50px;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    border-radius: 4px;
+    padding-left: 10px;
+    font-size: 1.1rem;
+  }
+
+  .add {
+    width: 20%;
+    height: 50px;
+    font-size: 1.5rem;
+    border-radius: 4px;
+    border: none;
+    background-color: #fea50d;
+  }
+
+  .lista {
+    width: 100%;
+    height: 70%;
+  }
+
+  .lista ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lista ul li {
+    margin-top: 10px;
+    width: 90%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: solid 1px #000;
+  }
+
+  .tarefa {
+    width: 80%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+
+  .tarefa p {
+    margin-left: 10px;
+    color: #fff;
+  }
+
+  .itens {
+    width: 20%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .feito {
+    background-color: #00e429;
+    text-decoration: line-through;
+    border-radius: 4px;
+
+  }
+}
+
+@media(min-width: 769px) and (max-width: 1024px) {
+  .container {
+    width: 100%;
+    height: 100vh;
+    background-color: #5f7eef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container-lista {
+    width: 80%;
+    height: 90%;
+    background-color: #160063;
+    border-radius: 10px;
+  }
+
+  .title {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title h1 {
+    font-size: 2rem;
+    color: #fff;
+  }
+
+  .container-tarefa {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .input {
+    width: 70%;
+    height: 50px;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    border-radius: 4px;
+    padding-left: 10px;
+    font-size: 1.1rem;
+  }
+
+  .add {
+    width: 20%;
+    height: 50px;
+    font-size: 1.5rem;
+    border-radius: 4px;
+    border: none;
+    background-color: #fea50d;
+  }
+
+  .lista {
+    width: 100%;
+    height: 70%;
+  }
+
+  .lista ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lista ul li {
+    margin-top: 10px;
+    width: 90%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: solid 1px #000;
+  }
+
+  .tarefa {
+    width: 80%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+
+  .tarefa p {
+    margin-left: 10px;
+    color: #fff;
+  }
+
+  .itens {
+    width: 20%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .feito {
+    background-color: #00e429;
+    text-decoration: line-through;
+    border-radius: 4px;
+
+  }
+}
+
+@media(min-width: 1025px) and (max-width: 1200px) {
+  .container {
+    background-color: #5f7eef;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container-lista {
+    background-color: #160063;
+    width: 55%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+
+  .title {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title h1 {
+    font-size: 3rem;
+    color: #fff;
+  }
+
+  .container-tarefa {
+    width: 95%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+  }
+
+  .container-tarefa input {
+    width: 70%;
+    height: 60px;
+    border-radius: 10px;
+    padding-left: 20px;
+    font-size: 1.1rem;
+    border: none;
+    background: none;
+    outline: none;
+    background-color: #fff;
+  }
+
+  .container-tarefa button {
+    width: 20%;
+    height: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.8rem;
+    border: none;
+    background: none;
+    background-color: #fea50d;
+  }
+
+  .container-tarefa button:hover {
+    opacity: 0.7;
+  }
+
+  .lista {
+    width: 100%;
+    height: 65%;
+    border-radius: 10px;
+
+  }
+
+  .lista ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lista ul li {
+    margin-top: 10px;
+    width: 88%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     border-bottom: solid 1px #000;
   }
 
   .feito {
     background-color: #00e429;
     text-decoration: line-through;
+    border-radius: 8px;
+
   }
 
   .tarefa {
-    width: 70%;
+    width: 80%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -90,21 +488,167 @@
 
   .tarefa p {
     margin-left: 10px;
+    color: #fff;
     font-size: 1.2rem;
   }
 
   .itens {
-    width: 30%;
+    width: 20%;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 4px;
   }
 
-  .itens button {
-    width: 48%;
-    height: 80%;
+  .icon {
+    width: 50px;
+    height: 50px;
     cursor: pointer;
   }
 
+  .icon img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media(min-width: 1201px) {
+  .container {
+    background-color: #5f7eef;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container-lista {
+    background-color: #160063;
+    width: 55%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+
+  .title {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title h1 {
+    font-size: 3rem;
+    color: #fff;
+  }
+
+  .container-tarefa {
+    width: 95%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+  }
+
+  .container-tarefa input {
+    width: 70%;
+    height: 60px;
+    border-radius: 10px;
+    padding-left: 20px;
+    font-size: 1.1rem;
+    border: none;
+    background: none;
+    outline: none;
+    background-color: #fff;
+  }
+
+  .container-tarefa button {
+    width: 20%;
+    height: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.7rem;
+    border: none;
+    background: none;
+    background-color: #fea50d;
+  }
+
+  .container-tarefa button:hover {
+    opacity: 0.7;
+  }
+
+  .lista {
+    width: 100%;
+    height: 65%;
+    border-radius: 10px;
+
+  }
+
+  .lista ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lista ul li {
+    margin-top: 10px;
+    width: 88%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: solid 1px #000;
+  }
+
+  .feito {
+    background-color: #00e429;
+    text-decoration: line-through;
+    border-radius: 8px;
+
+  }
+
+  .tarefa {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .tarefa p {
+    margin-left: 10px;
+    color: #fff;
+    font-size: 1.4rem;
+  }
+
+  .itens {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+
+  .icon img {
+    width: 100%;
+    height: 100%;
+  }
 }
