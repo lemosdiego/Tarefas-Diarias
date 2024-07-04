@@ -1,176 +1,110 @@
-/* Geral*/
 * {
   padding: 0;
   margin: 0;
-  font-family: helvetica;
-  color: #333;
   box-sizing: border-box;
 }
-body {
-  overflow: hidden;
-  background: #172a3a;
-}
-.container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-}
-header {
-  width: 100%;
-  height: 20%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-header h1 {
-  font-size: 3rem;
-  color: #fff;
-}
-.todo-container {
-  width: 50%;
-  height: 70%;
-  display: flex;
-  flex-direction: column;
-  box-shadow: rgba(255, 255, 255, 0.897) 0px 0px 0px 3px;
-  border-radius: 10px;
-}
-p {
-  color: #fff;
-}
-h4 {
-  color: #fff;
-}
-h3 {
-  color: #fff;
-}
-button {
-  background-color: antiquewhite;
-  color: #32558a;
-  border: 2px solid #34507a;
-  padding: 0.3rem 0.6rem;
-  font-size: 1rem;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.4s;
-}
 
-button:hover {
-  background-color: #32558a;
-  color: antiquewhite;
-}
-button:hover > i {
-  color: antiquewhite;
-}
-button i {
-  color: #32558a;
-  font-weight: bold;
-  pointer-events: none;
-}
+@media(min-width: 1201px) {
+  .container {
+    border: solid 10px #000;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
 
-input,
-select {
-  padding: 0.25rem 0.5rem;
-}
+  .container-tarefa {
+    width: 50%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    background-color: #fafafa;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  }
 
-.hide {
-  display: none;
-}
+  .container-tarefa input {
+    width: 70%;
+    height: 50px;
+    border-radius: 10px;
+    padding-left: 20px;
+    font-size: 1.1rem;
+  }
 
-/* header */
+  .container-tarefa button {
+    width: 20%;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    border: none;
 
-/* tarefa-form*/
-#todo-form,
-#edit-form {
-  padding: 1rem;
-  border-bottom: 1px solid #ccc;
-}
+  }
 
-#todo-form p,
-#edit-form p {
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
+  .container-tarefa button:hover {
+    opacity: 0.7;
+  }
 
-.form-controle {
-  display: flex;
-}
-.form-controle input {
-  margin-right: 0.3rem;
-}
+  .lista {
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+    background-color: #d1d1d1;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  }
 
-#cancel-edit-btn {
-  margin-top: 1rem;
-}
+  .lista ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-/* tarebar */
-#tarebar {
-  padding: 1rem;
-  border-bottom: 1px solid #ccc;
-  display: flex;
-}
+  .lista ul li {
+    margin-top: 10px;
+    width: 90%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px #000;
+  }
 
-#tarebar h4 {
-  margin-bottom: 0.5rem;
-}
+  .feito {
+    background-color: #00e429;
+    text-decoration: line-through;
+  }
 
-#search {
-  border-right: 1px solid #ddd;
-  padding-right: 1rem;
-  margin-right: 1rem;
-  width: 65%;
-  display: flex;
-  flex-direction: column;
-}
+  .tarefa {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
 
-#search form {
-  display: flex;
-}
+  .tarefa p {
+    margin-left: 10px;
+    font-size: 1.2rem;
+  }
 
-#search input {
-  width: 100%;
-  margin-right: 0.3rem;
-}
+  .itens {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-#filter {
-  width: 35%;
-  display: flex;
-  flex-direction: column;
-}
+  .itens button {
+    width: 48%;
+    height: 80%;
+    cursor: pointer;
+  }
 
-#filter select {
-  flex: 1;
-}
-
-/* Tarefa List */
-.todo {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1rem;
-  border-bottom: 1px solid #ddd;
-  transition: 0.3s;
-}
-
-.todo h3 {
-  flex: 1;
-  font-size: 0.9rem;
-}
-
-.todo button {
-  margin-left: 0.4rem;
-}
-
-.done {
-  background-color: #3c6d9ed0;
-}
-
-.done h3 {
-  color: #fff;
-  text-decoration: line-through;
-  font-style: italic;
 }
